@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'My First Flutter',
       theme: ThemeData(
         primarySwatch: Colors.lightGreen,
-        fontFamily: 'Itim Regular',
+        // fontFamily: 'Itim Regular',
       ),
       home: MyHomePage(),
     );
