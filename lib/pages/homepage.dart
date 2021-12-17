@@ -31,53 +31,57 @@ class MyHomePage extends StatelessWidget {
           line(),
           instagram(),
           telephone(),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 20),
-                child: Image.asset(
-                  'images/picture1.jpg',
-                  width: 300,
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 15),
-                child: Image.asset(
-                  'images/picture2.jpg',
-                  width: 300,
-                ),
-              ),
-            ],
-          ),
+          picture(),
         ],
       ),
     );
   }
 
+  Column picture() {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(top: 20),
+          child: Image.asset(
+            'images/picture1.jpg',
+            width: 300,
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 15),
+          child: Image.asset(
+            'images/picture2.jpg',
+            width: 300,
+          ),
+        ),
+      ],
+    );
+  }
+
   SizedBox stack() {
     return SizedBox(
-      width: 250,
-      height: 250,
+      width: 300,
+      height: 260,
       child: Stack(
         children: <Widget>[
           SizedBox(
             child: Container(
               // color: Colors.lightGreen,
-              decoration: new BoxDecoration(
-                  image: new DecorationImage(
+              decoration: BoxDecoration(
+                  image: DecorationImage(
                       fit: BoxFit.fill,
                       // image: new AssetImage('images/cover.jpg'),
                       image: NetworkImage(
-                        'https://c0.wallpaperflare.com/preview/699/525/229/plant-greenery-house-green.jpg',
+                        'https://www.teahub.io/photos/full/95-956927_minimalist-plant.jpg',
                       ))),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(110, 80, 0, 10),
+            padding: const EdgeInsets.fromLTRB(110, 90, 0, 10),
             child: Container(
               child: const CircleAvatar(
-                radius: 85,
+                radius: 80,
                 backgroundImage: AssetImage('images/profile.jpg'),
               ),
             ),
@@ -178,7 +182,7 @@ class MyHomePage extends StatelessWidget {
         // ignore: prefer_const_constructors
         Padding(
             padding: const EdgeInsets.fromLTRB(25, 10, 0, 0),
-            child: const FaIcon(FontAwesomeIcons.facebook)),
+            child: const FaIcon(FontAwesomeIcons.facebookSquare)),
         Padding(
           padding: const EdgeInsets.fromLTRB(20, 10, 0, 0),
           child: Text(
@@ -201,7 +205,7 @@ class MyHomePage extends StatelessWidget {
           child: Text(
             '━━━━━━━━ Contact me ━━━━━━━━',
             style: GoogleFonts.itim(
-              color: Colors.lightGreen[800],
+              color: Colors.green[800],
               fontSize: 18,
             ),
           ),
@@ -219,7 +223,7 @@ class MyHomePage extends StatelessWidget {
           child: Text(
             '━━━━━━━━ My Profile ━━━━━━━━',
             style: GoogleFonts.itim(
-              color: Colors.lightGreen[800],
+              color: Colors.green[800],
               fontSize: 18,
             ),
           ),
@@ -295,7 +299,7 @@ class MyHomePage extends StatelessWidget {
       // margin: const EdgeInsets.symmetric(horizontal: 40.0),
       margin: const EdgeInsets.fromLTRB(35, 10, 35, 0),
       child: Card(
-        color: Colors.lightGreen,
+        color: Colors.green[400],
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -323,8 +327,8 @@ class MyHomePage extends StatelessWidget {
         Text(
           'ชื่อจริง นายอิงกมล พูลนวล',
           style: GoogleFonts.itim(
-            color: Colors.lightGreen[800],
-            fontSize: 24,
+            color: Colors.green[800],
+            fontSize: 26,
             fontWeight: FontWeight.w300,
           ),
         ),
@@ -341,8 +345,8 @@ class MyHomePage extends StatelessWidget {
           child: Text(
             'สวัสดีครับ ผมเด็กชายอิง',
             style: GoogleFonts.itim(
-              color: Colors.lightGreen[800],
-              fontSize: 24,
+              color: Colors.green[800],
+              fontSize: 26,
               fontWeight: FontWeight.w300,
             ),
           ),
