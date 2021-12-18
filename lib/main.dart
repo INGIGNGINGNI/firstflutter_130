@@ -1,5 +1,6 @@
 import 'package:firstflutter/pages/homepage.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'My First Flutter',
       theme: ThemeData(
         primarySwatch: Colors.green,
-        // fontFamily: 'Itim Regular',
+        textTheme: GoogleFonts.itimTextTheme(),
       ),
       home: MyHomePage(),
     );

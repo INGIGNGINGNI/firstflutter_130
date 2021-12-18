@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -8,9 +7,9 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "INGKAMON APP",
-          style: GoogleFonts.barlow(
+          style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
           ),
@@ -22,11 +21,11 @@ class MyHomePage extends StatelessWidget {
           nickname(),
           firstname(),
           university(),
-          profile(),
+          divider1(),
           birthday(),
           music(),
           football(),
-          contact(),
+          divider2(),
           facebook(),
           line(),
           instagram(),
@@ -68,7 +67,7 @@ class MyHomePage extends StatelessWidget {
           SizedBox(
             child: Container(
               // color: Colors.lightGreen,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   image: DecorationImage(
                       fit: BoxFit.fill,
                       // image: new AssetImage('images/cover.jpg'),
@@ -94,16 +93,16 @@ class MyHomePage extends StatelessWidget {
   Row football() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
+      children: const [
         // ignore: prefer_const_constructors
         Padding(
-            padding: const EdgeInsets.all(5.0),
-            child: const FaIcon(FontAwesomeIcons.futbol)),
+            padding: EdgeInsets.all(5.0),
+            child: FaIcon(FontAwesomeIcons.futbol)),
         Padding(
-          padding: const EdgeInsets.all(5.0),
+          padding: EdgeInsets.all(5.0),
           child: Text(
             'Paris Saint Germain',
-            style: GoogleFonts.itim(
+            style: TextStyle(
               fontSize: 20,
             ),
           ),
@@ -115,16 +114,16 @@ class MyHomePage extends StatelessWidget {
   Row music() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
+      children: const [
         // ignore: prefer_const_constructors
         Padding(
-            padding: const EdgeInsets.all(5.0),
-            child: const FaIcon(FontAwesomeIcons.music)),
+            padding: EdgeInsets.all(5.0),
+            child: FaIcon(FontAwesomeIcons.music)),
         Padding(
-          padding: const EdgeInsets.all(5.0),
+          padding: EdgeInsets.all(5.0),
           child: Text(
             'ชอบฟังเพลง Three man down',
-            style: GoogleFonts.itim(
+            style: TextStyle(
               fontSize: 20,
             ),
           ),
@@ -136,16 +135,16 @@ class MyHomePage extends StatelessWidget {
   Row instagram() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
+      children: const [
         // ignore: prefer_const_constructors
         Padding(
-            padding: const EdgeInsets.fromLTRB(75, 10, 30, 0),
-            child: const FaIcon(FontAwesomeIcons.instagramSquare)),
+            padding: EdgeInsets.fromLTRB(75, 10, 30, 0),
+            child: FaIcon(FontAwesomeIcons.instagramSquare)),
         Padding(
-          padding: const EdgeInsets.fromLTRB(0, 10, 90, 0),
+          padding: EdgeInsets.fromLTRB(0, 10, 90, 0),
           child: Text(
             'amazing_ingx',
-            style: GoogleFonts.itim(
+            style: TextStyle(
               fontSize: 20,
             ),
           ),
@@ -157,16 +156,16 @@ class MyHomePage extends StatelessWidget {
   Row line() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
+      children: const [
         // ignore: prefer_const_constructors
         Padding(
-            padding: const EdgeInsets.fromLTRB(0, 10, 25, 0),
-            child: const FaIcon(FontAwesomeIcons.line)),
+            padding: EdgeInsets.fromLTRB(0, 10, 25, 0),
+            child: FaIcon(FontAwesomeIcons.line)),
         Padding(
-          padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+          padding: EdgeInsets.fromLTRB(0, 10, 0, 0),
           child: Text(
             'Ingkamon16764',
-            style: GoogleFonts.itim(
+            style: TextStyle(
               fontSize: 20,
             ),
           ),
@@ -178,16 +177,16 @@ class MyHomePage extends StatelessWidget {
   Row facebook() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
+      children: const [
         // ignore: prefer_const_constructors
         Padding(
-            padding: const EdgeInsets.fromLTRB(25, 10, 0, 0),
-            child: const FaIcon(FontAwesomeIcons.facebookSquare)),
+            padding: EdgeInsets.fromLTRB(25, 10, 0, 0),
+            child: FaIcon(FontAwesomeIcons.facebookSquare)),
         Padding(
-          padding: const EdgeInsets.fromLTRB(20, 10, 0, 0),
+          padding: EdgeInsets.fromLTRB(20, 10, 0, 0),
           child: Text(
             'Ingkarmol Poolnual',
-            style: GoogleFonts.itim(
+            style: TextStyle(
               fontSize: 20,
             ),
           ),
@@ -196,17 +195,31 @@ class MyHomePage extends StatelessWidget {
     );
   }
 
-  Row contact() {
+  Widget divider2() {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Padding(
-          padding: const EdgeInsets.fromLTRB(0, 5, 0, 0),
-          child: Text(
-            '━━━━━━━━ Contact me ━━━━━━━━',
-            style: GoogleFonts.itim(
-              color: Colors.green[800],
-              fontSize: 18,
+        Expanded(
+          child: Container(
+            margin: const EdgeInsets.fromLTRB(30, 15, 10, 10),
+            child: const Divider(
+              thickness: 4,
+              color: Colors.green,
+            ),
+          ),
+        ),
+        Text(
+          'Contact me',
+          style: TextStyle(
+            fontSize: 18,
+            color: Colors.green[700],
+          ),
+        ),
+        Expanded(
+          child: Container(
+            margin: const EdgeInsets.fromLTRB(10, 15, 30, 10),
+            child: const Divider(
+              thickness: 4,
+              color: Colors.green,
             ),
           ),
         ),
@@ -214,17 +227,31 @@ class MyHomePage extends StatelessWidget {
     );
   }
 
-  Row profile() {
+  Widget divider1() {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Padding(
-          padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
-          child: Text(
-            '━━━━━━━━ My Profile ━━━━━━━━',
-            style: GoogleFonts.itim(
-              color: Colors.green[800],
-              fontSize: 18,
+        Expanded(
+          child: Container(
+            margin: const EdgeInsets.fromLTRB(30, 10, 10, 10),
+            child: const Divider(
+              thickness: 4,
+              color: Colors.green,
+            ),
+          ),
+        ),
+        Text(
+          'My Profile',
+          style: TextStyle(
+            fontSize: 18,
+            color: Colors.green[700],
+          ),
+        ),
+        Expanded(
+          child: Container(
+            margin: const EdgeInsets.fromLTRB(10, 10, 30, 10),
+            child: const Divider(
+              thickness: 4,
+              color: Colors.green,
             ),
           ),
         ),
@@ -254,17 +281,17 @@ class MyHomePage extends StatelessWidget {
   Row telephone() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
+      children: const [
         // ignore: prefer_const_constructors
         Padding(
-          padding: const EdgeInsets.fromLTRB(12, 10, 10, 0),
-          child: const FaIcon(FontAwesomeIcons.mobileAlt),
+          padding: EdgeInsets.fromLTRB(12, 10, 10, 0),
+          child: FaIcon(FontAwesomeIcons.mobileAlt),
         ),
         Padding(
-          padding: const EdgeInsets.fromLTRB(25, 10, 30, 0),
+          padding: EdgeInsets.fromLTRB(25, 10, 30, 0),
           child: Text(
             '093-7327118',
-            style: GoogleFonts.itim(
+            style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.w300,
             ),
@@ -277,15 +304,15 @@ class MyHomePage extends StatelessWidget {
   Row birthday() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
+      children: const [
         // ignore: prefer_const_constructors
         Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: const FaIcon(FontAwesomeIcons.birthdayCake),
+          padding: EdgeInsets.all(8.0),
+          child: FaIcon(FontAwesomeIcons.birthdayCake),
         ),
         Text(
           '20 มีนาคม 2564',
-          style: GoogleFonts.itim(
+          style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w300,
           ),
@@ -302,14 +329,14 @@ class MyHomePage extends StatelessWidget {
         color: Colors.green[400],
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Padding(
+          children: const [
+            Padding(
               padding: EdgeInsets.all(8.0),
               child: FaIcon(FontAwesomeIcons.university),
             ),
             Text(
               'IT THAKSIN UNIVERSITY',
-              style: GoogleFonts.itim(
+              style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.w300,
               ),
@@ -326,7 +353,7 @@ class MyHomePage extends StatelessWidget {
       children: [
         Text(
           'ชื่อจริง นายอิงกมล พูลนวล',
-          style: GoogleFonts.itim(
+          style: TextStyle(
             color: Colors.green[800],
             fontSize: 26,
             fontWeight: FontWeight.w300,
@@ -344,7 +371,7 @@ class MyHomePage extends StatelessWidget {
           padding: const EdgeInsets.only(top: 20),
           child: Text(
             'สวัสดีครับ ผมเด็กชายอิง',
-            style: GoogleFonts.itim(
+            style: TextStyle(
               color: Colors.green[800],
               fontSize: 26,
               fontWeight: FontWeight.w300,
